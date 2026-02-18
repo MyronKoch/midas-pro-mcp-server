@@ -1,0 +1,15 @@
+# Development source and build artifacts
+src/
+dist/
+tsconfig.json
+bun.lockb
+bun.lock
+PRD.md
+*.ts
+*.map
+*.d.ts
+*.mcpb
+
+# Top-level duplicates (these exist inside server/ too)
+data/pro-series-endpoints.json
+data/pro-series-internal-fx-parameters-endpoints.json

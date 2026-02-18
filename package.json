@@ -1,0 +1,36 @@
+{
+  "name": "midas-pro-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for discovering and controlling Midas Pro Series mixing consoles over OSC",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "midas-pro-mcp-server": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "node-osc": "^11.2.2",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "keywords": [
+    "midas",
+    "pro-series",
+    "pro2",
+    "osc",
+    "mcp",
+    "mixing-console",
+    "audio",
+    "live-sound"
+  ],
+  "license": "MIT"
+}

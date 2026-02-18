@@ -1,0 +1,110 @@
+{
+  "manifest_version": "0.3",
+  "name": "midas-pro-osc",
+  "display_name": "Midas Pro Series Mixer Control",
+  "version": "0.1.0",
+  "description": "Browse, search, and control Midas Pro Series mixing consoles (Pro2C, Pro1, etc.) over OSC. Includes a complete database of 4,500+ reverse-engineered OSC commands.",
+  "long_description": "This extension gives Claude full knowledge of the Midas Pro Series OSC command set — over 4,500 endpoints reverse-engineered from console firmware. Use it to:\n\n- **Discover commands**: Search across 33 control groups covering mic inputs, masters, aux returns, EQ, FX, mute groups, VCA groups, and more.\n- **Build OSC paths**: Get the exact OSC address to send for any parameter.\n- **Control your console**: Connect to a live Midas Pro mixer on your network and get/set any parameter via natural language.\n\nPerfect for live sound engineers, theater technicians, and anyone automating a Midas Pro Series console.\n\nBased on the community reverse-engineering work at github.com/Guffawker/midas-pro-series-osc-commands.",
+  "author": {
+    "name": "Midas Pro OSC Community"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Guffawker/midas-pro-series-osc-commands"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ],
+      "env": {
+        "MIDAS_IP": "${user_config.console_ip}",
+        "MIDAS_PORT": "${user_config.console_port}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "list_groups",
+      "description": "List all 33 Midas Pro Series control groups with endpoint counts"
+    },
+    {
+      "name": "list_endpoints",
+      "description": "List all endpoints in a specific control group"
+    },
+    {
+      "name": "search_endpoints",
+      "description": "Search across all 4,500+ OSC endpoints by keyword"
+    },
+    {
+      "name": "get_endpoint_info",
+      "description": "Get complete details and usage hints for a specific endpoint"
+    },
+    {
+      "name": "build_osc_command",
+      "description": "Construct the exact OSC path for a command"
+    },
+    {
+      "name": "connect",
+      "description": "Connect to a Midas Pro console on the network"
+    },
+    {
+      "name": "disconnect",
+      "description": "Disconnect from the console"
+    },
+    {
+      "name": "connection_status",
+      "description": "Check current connection status"
+    },
+    {
+      "name": "get_value",
+      "description": "Read a parameter value from the live console"
+    },
+    {
+      "name": "set_value",
+      "description": "Set a parameter value on the live console"
+    }
+  ],
+  "keywords": [
+    "midas",
+    "pro-series",
+    "pro2",
+    "pro2c",
+    "osc",
+    "mixing-console",
+    "audio",
+    "live-sound",
+    "sound-engineering"
+  ],
+  "license": "MIT",
+  "user_config": {
+    "console_ip": {
+      "type": "string",
+      "title": "Console IP Address",
+      "description": "IP address of your Midas Pro Series console (e.g. 192.168.1.100). Leave blank to use the search/browse tools without a live connection.",
+      "required": false,
+      "default": ""
+    },
+    "console_port": {
+      "type": "number",
+      "title": "OSC Port",
+      "description": "OSC port on the console (usually 10023)",
+      "required": false,
+      "default": 10023,
+      "min": 1,
+      "max": 65535
+    }
+  },
+  "compatibility": {
+    "claude_desktop": ">=0.10.0",
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "privacy_policies": []
+}

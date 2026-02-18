@@ -1,0 +1,10 @@
+{
+  "name": "midas-pro-mcp-server",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "node-osc": "^11.2.2",
+    "zod": "^3.23.0"
+  }
+}

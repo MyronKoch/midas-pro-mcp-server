@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.mcpb
+_bundle/
+cert.pem
+key.pem
+.env
+.env.*
+*.map
+
+# Server bundle (rebuilt from source)
+server/node_modules/
+server/package-lock.json
