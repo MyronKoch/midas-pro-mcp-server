@@ -4,6 +4,20 @@ An MCP (Model Context Protocol) server that lets Claude browse, search, and cont
 
 Includes a complete database of **4,500+ reverse-engineered OSC endpoints** across 33 control groups.
 
+---
+
+### Quick Install (3 clicks)
+
+[**Download midas-pro-osc.mcpb**](https://github.com/MyronKoch/midas-pro-mcp-server/releases/latest/download/midas-pro-osc.mcpb)
+
+> 1. Click the link above to download
+> 2. Double-click the downloaded file
+> 3. Claude Desktop opens and installs it automatically
+>
+> That's it. No terminal, no config files, no coding.
+
+---
+
 ## What It Does
 
 **Without a mixer connected (offline mode):**
@@ -22,7 +36,7 @@ Includes a complete database of **4,500+ reverse-engineered OSC endpoints** acro
 
 This is the easiest way. No terminal or config files needed.
 
-1. Download `midas-pro-osc.mcpb` from the [Releases page](https://github.com/MyronKoch/midas-pro-mcp-server/releases)
+1. [**Download midas-pro-osc.mcpb**](https://github.com/MyronKoch/midas-pro-mcp-server/releases/latest/download/midas-pro-osc.mcpb)
 2. Open **Claude Desktop**
 3. Go to **Settings > Extensions**
 4. Drag the `.mcpb` file into the window, or click "Install from file"
